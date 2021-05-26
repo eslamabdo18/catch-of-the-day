@@ -5,6 +5,8 @@ class Order extends React.Component {
     return(
       <div className = "order">
         <h2>Order</h2>
+        <li>
+        </li>
       </div>
     )
   }
