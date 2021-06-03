@@ -5,10 +5,14 @@ class Fish extends React.Component {
 
   addToCart = () =>{
     console.log("clicked")
-    this.props.addToCart(this.props.details);
+    this.props.addToCart(this.props.index);
   }
   render() {
     const {name,price,image,status,desc} = this.props.details;
+    var isAvailable = false;
+    if(status==="available"){
+      isAvailable = true;
+    }
     return(
       <li className="menu-fish">
         <img src={image}/>
@@ -17,7 +21,7 @@ class Fish extends React.Component {
           <span className="price">{formatPrice(price)}</span>
         </h3>
         <p> {desc}</p>
-        <button onClick = {this.addToCart}>Add to cart</button>
+        <button disabled={!isAvailable} onClick = {this.addToCart} > {isAvailable ? "Add to cart" : "Sold Out!" } </button>
       </li>
     )
   }
