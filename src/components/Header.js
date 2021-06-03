@@ -1,4 +1,5 @@
 import React from 'react';
+import AddNewFish from './AddNewFish';
 
 
 // function to render.
@@ -14,7 +15,9 @@ const Header = ({tagline}) =>(
       <h3 className= 'tagline'>
         <span> {tagline} </span>
       </h3>
+      
     </header>
+
 )
 
 

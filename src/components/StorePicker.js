@@ -1,9 +1,7 @@
-import React from 'react';
-import {getFunName} from '../helpers';
-
+import React from "react";
+import { getFunName } from "../helpers";
 
 class StorePicker extends React.Component {
-
   /*
     this a way to bind
   */
@@ -13,25 +11,29 @@ class StorePicker extends React.Component {
   // }
 
   myInput = React.createRef();
-  handleSubmit = event => {
+  handleSubmit = (event) => {
     event.preventDefault();
     const storeName = this.myInput.current.value;
-    this.props.history.push(`/store/${storeName}`)
-  }
+    this.props.history.push(`/store/${storeName}`);
+  };
 
   render() {
-    return(
+    return (
       <React.Fragment>
-        <form className = 'store-selector' onSubmit={this.handleSubmit}>
+        <form className="store-selector" onSubmit={this.handleSubmit}>
           <h2> please enter an store </h2>
-          <input type="text" ref={this.myInput} required placeholder="Store Name" defaultValue = {getFunName()}/>
-          <button type='submit'> Visit Store </button>
+          <input
+            type="text"
+            ref={this.myInput}
+            required
+            placeholder="Store Name"
+            defaultValue={getFunName()}
+          />
+          <button type="submit"> Visit Store </button>
         </form>
-     </React.Fragment>
-    )
-
+      </React.Fragment>
+    );
   }
 }
-
 
 export default StorePicker;

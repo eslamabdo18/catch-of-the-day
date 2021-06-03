@@ -7,6 +7,8 @@ class Fish extends React.Component {
     console.log("clicked")
     this.props.addToCart(this.props.index);
   }
+
+
   render() {
     const {name,price,image,status,desc} = this.props.details;
     var isAvailable = false;

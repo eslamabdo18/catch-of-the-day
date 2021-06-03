@@ -27,8 +27,8 @@ class AddNewFish extends React.Component {
         <input ref ={this.iname} name="name" type= "text" placeholder="Name" />
         <input  ref ={this.iprice} name="price" type= "text" placeholder="Price"/>
         <select ref={this.istatus}>
-          <option value = "true"> Fresh!</option>
-          <option value = "false"> sold out!</option>
+          <option value = "available"> Fresh!</option>
+          <option value = "unavailable"> sold out!</option>
         </select>
         <textarea ref ={this.idesc} name="desc" placeholder="desc"></textarea>
         <input ref ={this.iimage} name="image" type= "text" placeholder = "Image"/>
