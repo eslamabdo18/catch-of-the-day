@@ -1,5 +1,5 @@
 import React from 'react';
-import AddNewFish from './AddNewFish';
+import PropTypes from 'prop-types';
 
 
 // function to render.
@@ -20,11 +20,7 @@ const Header = ({tagline}) =>(
 
 )
 
-
-// class Header extends React.Component{
-//   render() {
-//     return(Header(this.props));
-//   }
-// }
-
+Header.propTypes = {
+  tagline: PropTypes.string.isRequired
+};
 export default  Header;

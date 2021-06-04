@@ -7,6 +7,7 @@ import Fish from "./Fish";
 import base from "../base";
 
 class App extends React.Component {
+
   state = {
     fishes: {},
     orders: {},
@@ -72,6 +73,7 @@ class App extends React.Component {
     delete orders[key];
     this.setState({ orders });
   };
+
   render() {
     return (
       <div className="catch-of-the-day">

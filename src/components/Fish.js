@@ -1,5 +1,7 @@
 import React from 'react';
-import {formatPrice} from "../helpers"
+import PropTypes from 'prop-types';
+import {formatPrice} from "../helpers";
+
 
 class Fish extends React.Component {
 
@@ -8,7 +10,16 @@ class Fish extends React.Component {
     this.props.addToCart(this.props.index);
   }
 
-
+  static propTypes = {
+    detail: propTypes.shape({
+      name: propTypes.string,
+      price: propTypes.number,
+      image: propTypes.string,
+      status:propTypes.string,
+      desc:propTypes.string
+    }),
+    addToCart: PropTypes.func.isRequired
+  } 
   render() {
     const {name,price,image,status,desc} = this.props.details;
     var isAvailable = false;
